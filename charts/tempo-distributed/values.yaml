@@ -1887,7 +1887,7 @@ minio:
   enabled: false
   mode: standalone
   rootUser: grafana-tempo
-  rootPassword: supersecret
+  rootPassword: ""
   buckets:
     # Default Tempo storage bucket.
     - name: tempo-traces

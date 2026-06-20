@@ -377,8 +377,8 @@ extraPorts: {}
 # -- PodSecurityPolicy configuration.
 # @default -- See `values.yaml`
 podSecurityPolicy:
-  privileged: true
-  allowPrivilegeEscalation: true
+  privileged: false
+  allowPrivilegeEscalation: false
   volumes:
     - 'secret'
     - 'hostPath'
