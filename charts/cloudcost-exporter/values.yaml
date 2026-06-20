@@ -44,6 +44,17 @@ securityContext:
   # -- Filesystem group to associate for each pod
   fsGroup: 10001
 
+containerSecurityContext:
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  runAsNonRoot: true
+  runAsUser: 10001
+  capabilities:
+    drop:
+      - ALL
+  seccompProfile:
+    type: RuntimeDefault
+
 service:
   # -- Service type
   type: ClusterIP

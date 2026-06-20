@@ -160,7 +160,7 @@ commonConfig:
     s3:
       endpoint: '{{ include "enterprise-logs.minio" . }}'
       bucketnames: enterprise-logs-tsdb
-      secret_access_key: supersecret
+      secret_access_key: ""
       access_key_id: enterprise-logs
       s3forcepathstyle: true
       insecure: true
@@ -603,7 +603,7 @@ loki-distributed:
 minio:
   enabled: true
   accessKey: enterprise-logs
-  secretKey: supersecret
+  secretKey: ""
   buckets:
     - name: enterprise-logs-tsdb
       policy: none
